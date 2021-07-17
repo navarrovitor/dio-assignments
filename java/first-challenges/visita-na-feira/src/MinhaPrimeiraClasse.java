@@ -5,11 +5,10 @@ import java.util.StringTokenizer;
 
 public class MinhaPrimeiraClasse {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        var br = new BufferedReader(new InputStreamReader(System.in));
+        var st = new StringTokenizer(br.readLine());
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
-        int total = a + b;
-        System.out.println("X = " + total);
+        System.out.println("X = " + (a + b));
     }
 }
