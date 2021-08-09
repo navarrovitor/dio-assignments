@@ -14,8 +14,8 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class HourBank {
-
   @AllArgsConstructor
   @NoArgsConstructor
   @EqualsAndHashCode

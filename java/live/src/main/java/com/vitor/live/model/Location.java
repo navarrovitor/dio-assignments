@@ -1,5 +1,7 @@
 package com.vitor.live.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 import lombok.*;
@@ -10,7 +12,9 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Location {
+  @Id
   private Long id;
   private String description;
 

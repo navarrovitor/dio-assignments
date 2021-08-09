@@ -3,7 +3,7 @@ package com.vitor.live.model;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 import lombok.*;
 
@@ -13,8 +13,12 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class User {
+
+  @Id
   private Long id;
+
   private String name;
   private BigDecimal tolerance;
   private LocalDateTime workDayBeg;

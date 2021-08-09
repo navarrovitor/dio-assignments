@@ -14,6 +14,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Action {
 
   @AllArgsConstructor
