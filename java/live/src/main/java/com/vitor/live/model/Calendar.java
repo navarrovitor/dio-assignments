@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.*;
 
@@ -19,5 +20,6 @@ public class Calendar {
   private Long id;
   private String description;
   private LocalDateTime specialDate;
+  @ManyToOne
   private DataType dataType;
 }

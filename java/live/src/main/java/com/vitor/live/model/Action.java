@@ -30,7 +30,9 @@ public class Action {
   private ActionId id;
   private LocalDateTime start;
   private LocalDateTime end;
-  private BigDecimal workTime;
+  private BigDecimal period;
+  @ManyToOne
   private Occurrence occurrence;
+  @ManyToOne
   private Calendar calendar;
 }
