@@ -1,10 +1,10 @@
 package com.vitor.live.repository;
 
-import com.vitor.live.model.WorkingDay;
+import com.vitor.live.model.WorkJourney;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface WorkingDayRepository extends JpaRepository<WorkingDay, Long> {
+public interface WorkJourneyRepository extends JpaRepository<WorkJourney, Long> {
 }

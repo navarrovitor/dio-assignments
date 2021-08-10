@@ -12,7 +12,7 @@ import lombok.*;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class WorkingDay {
+public class WorkJourney {
   @Id
   private Long id;
   private String description;

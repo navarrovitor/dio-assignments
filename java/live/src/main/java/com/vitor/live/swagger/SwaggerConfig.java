@@ -19,7 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
   @Bean
   public Docket apiAdmin() {
-    return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("com.dio.live"))
+    return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("com.vitor.live"))
         .paths(PathSelectors.ant("/**")).build().apiInfo(apiInfo()).globalOperationParameters(
             Collections.singletonList(new ParameterBuilder().name("Authorization").description("Header para Token JWT")
                 .modelRef(new ModelRef("string")).parameterType("header").required(false).build()));

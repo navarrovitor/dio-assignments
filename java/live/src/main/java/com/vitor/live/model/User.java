@@ -38,5 +38,5 @@ public class User {
 
   // foreign key that connects to Working Day
   @ManyToOne
-  private WorkingDay workingDay;
+  private WorkJourney workJourney;
 }

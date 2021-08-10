@@ -3,8 +3,8 @@ package com.vitor.live.controller;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import com.vitor.live.model.WorkingDay;
-import com.vitor.live.service.WorkingDayService;
+import com.vitor.live.model.WorkJourney;
+import com.vitor.live.service.WorkJourneyService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,26 +16,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/workingday")
-public class WorkingDayController {
+@RequestMapping("/workjourney")
+public class WorkJourneyController {
 
   @Autowired
-  WorkingDayService workingDayService;
+  WorkJourneyService workJourneyService;
 
   @PostMapping
-  public WorkingDay createWorkingDay(@RequestBody WorkingDay workingDay) {
-    return workingDayService.saveWorkingDay(workingDay);
+  public WorkJourney createWorkJourney(@RequestBody WorkJourney workJourney) {
+    return workJourneyService.saveWorkJourney(workJourney);
   }
 
   @GetMapping
-  public List<WorkingDay> getWorkingDay() {
-    return workingDayService.findAll();
+  public List<WorkJourney> getWorkJourney() {
+    return workJourneyService.findAll();
   }
 
-  @GetMapping("/{workingdayid}")
-  public ResponseEntity<WorkingDay> getWorkingDayById(@PathVariable("workingdayid") Long workingDayId)
+  @GetMapping("/{workjourneyid}")
+  public ResponseEntity<WorkJourney> getWorkJourneyById(@PathVariable("workjourneyid") Long workJourneyId)
       throws Exception {
     return ResponseEntity.ok(
-        workingDayService.getById(workingDayId).orElseThrow(() -> new NoSuchElementException("Element not found.")));
+        workJourneyService.getById(workJourneyId).orElseThrow(() -> new NoSuchElementException("Element not found.")));
   }
 }
