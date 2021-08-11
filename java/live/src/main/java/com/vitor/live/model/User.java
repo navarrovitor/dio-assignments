@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.Audited;
+
 import lombok.*;
 
 @Getter
@@ -14,6 +16,7 @@ import lombok.*;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class User {
 
   @Id

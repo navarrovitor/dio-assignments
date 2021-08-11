@@ -39,14 +39,13 @@ public class WorkJourneyController {
     return workJourneyService.updateWorkJourney(workJourney);
   }
 
-  // @DeleteMapping("/{workjourneyid}")
-  // public ResponseEntity<WorkJourney> deleteByID(@PathVariable("workjourneyid")
-  // Long workJourneyid) throws Exception {
-  // try {
-  // workJourneyService.deleteWorkJourney(workJourneyid);
-  // } catch (Exception e) {
-  // System.out.println(e.getMessage());
-  // }
-  // return (ResponseEntity<WorkJourney>) ResponseEntity.ok();
-  // }
+  @DeleteMapping("/{workjourneyid}")
+  public ResponseEntity<WorkJourney> deleteByID(@PathVariable("workjourneyid") Long workJourneyid) throws Exception {
+    try {
+      workJourneyService.deleteWorkJourney(workJourneyid);
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+    return (ResponseEntity<WorkJourney>) ResponseEntity.ok();
+  }
 }

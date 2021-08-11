@@ -424,3 +424,6 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 2021-08-10 18:57:21 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DROP WORKING_DAY[*]"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
 DROP WORKING_DAY [42001-200]
+2021-08-11 16:59:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "WORK_JOURNEY_AUD" not found; SQL statement:
+insert into work_journey_aud (revtype, description, id, rev) values (?, ?, ?, ?) [42102-200]

@@ -3,6 +3,8 @@ package com.vitor.live.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.hibernate.envers.Audited;
+
 import lombok.*;
 
 @Getter
@@ -12,6 +14,7 @@ import lombok.*;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class Company {
   @Id
   private Long id;
