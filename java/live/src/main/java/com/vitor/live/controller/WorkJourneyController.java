@@ -39,6 +39,7 @@ public class WorkJourneyController {
     return workJourneyService.updateWorkJourney(workJourney);
   }
 
+  @SuppressWarnings("unchecked")
   @DeleteMapping(value = "/{workJourneyId}")
   public ResponseEntity<WorkJourney> deleteByID(@PathVariable("workJourneyId") Long workJourneyId) throws Exception {
     try {

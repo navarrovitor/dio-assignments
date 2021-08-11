@@ -427,3 +427,6 @@ DROP WORKING_DAY [42001-200]
 2021-08-11 16:59:13 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "WORK_JOURNEY_AUD" not found; SQL statement:
 insert into work_journey_aud (revtype, description, id, rev) values (?, ?, ?, ?) [42102-200]
+2021-08-11 18:29:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROMWORK_JOURNEY[*]"; SQL statement:
+SELECT * FROMWORK_JOURNEY [42000-200]

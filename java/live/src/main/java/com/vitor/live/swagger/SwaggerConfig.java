@@ -27,7 +27,7 @@ public class SwaggerConfig {
 
   @Bean
   public ApiInfo apiInfo() {
-    return new ApiInfoBuilder().title("API-REST").description("Clock punching API").version("1.0.0")
+    return new ApiInfoBuilder().title("Clock punching API").description("API-REST").version("1.0")
         .license("Apache License Version 2.0").licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
         .contact(new Contact("Vitor Navarro", "https://github.com/navarrovitor", "vitor.san.nav@gmail.com")).build();
   }
