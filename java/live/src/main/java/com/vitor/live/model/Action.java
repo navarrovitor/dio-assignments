@@ -27,6 +27,7 @@ public class Action {
   }
 
   @EmbeddedId
+  @GeneratedValue
   private ActionId id;
   private LocalDateTime start;
   private LocalDateTime end;

@@ -1,6 +1,7 @@
 package com.vitor.live.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -15,6 +16,7 @@ import lombok.*;
 @Entity
 public class Location {
   @Id
+  @GeneratedValue
   private Long id;
   private String description;
 

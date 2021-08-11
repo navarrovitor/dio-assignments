@@ -27,6 +27,7 @@ public class HourBank {
   }
 
   @EmbeddedId
+  @GeneratedValue
   private HourBankId id;
   private LocalDateTime workedDate;
   private BigDecimal workingTime;
