@@ -8,12 +8,7 @@ import com.vitor.live.service.WorkJourneyService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/workjourney")
@@ -38,4 +33,20 @@ public class WorkJourneyController {
     return ResponseEntity.ok(
         workJourneyService.getById(workJourneyId).orElseThrow(() -> new NoSuchElementException("Element not found.")));
   }
+
+  @PutMapping
+  public WorkJourney updateWorkJourney(@RequestBody WorkJourney workJourney) {
+    return workJourneyService.updateWorkJourney(workJourney);
+  }
+
+  // @DeleteMapping("/{workjourneyid}")
+  // public ResponseEntity<WorkJourney> deleteByID(@PathVariable("workjourneyid")
+  // Long workJourneyid) throws Exception {
+  // try {
+  // workJourneyService.deleteWorkJourney(workJourneyid);
+  // } catch (Exception e) {
+  // System.out.println(e.getMessage());
+  // }
+  // return (ResponseEntity<WorkJourney>) ResponseEntity.ok();
+  // }
 }

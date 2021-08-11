@@ -34,5 +34,4 @@ public class WorkJourneyService {
   public void deleteWorkJourney(Long workJourneyId) {
     workJourneyRepository.deleteById(workJourneyId);
   }
-
 }

@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.hibernate.envers.Audited;
+
 import lombok.*;
 
 @Getter
@@ -13,6 +15,7 @@ import lombok.*;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class WorkJourney {
   @Id
   @GeneratedValue
